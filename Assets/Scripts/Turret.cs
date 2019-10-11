@@ -6,6 +6,7 @@ public class Turret : MonoBehaviour
 {
     public Transform target;
     public float range = 15f;
+    public Transform rotator;
 
     public string agentTag = "Agent";
 
@@ -18,7 +19,14 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (target == null) {
+            return;
+        }
+
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(rotator.rotation, lookRotation, Time.deltaTime).eulerAngles;
+        rotator.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     void UpdateTarget()
@@ -29,7 +37,17 @@ public class Turret : MonoBehaviour
 
         foreach (GameObject agent in agents)
         {
-            float distanceToAgent = Vector3.Distance(transform.position, agents.position);
+            float distanceToAgent = Vector3.Distance(transform.position, agent.transform.position);
+            if (distanceToAgent < shortestDistance) { 
+                shortestDistance = distanceToAgent;
+                nearestAgent = agent;
+            }
+
+            if (nearestAgent != null && shortestDistance <= range) {
+                target = nearestAgent.transform;
+            } else {
+                target = null;
+            }
         }
     }
 
