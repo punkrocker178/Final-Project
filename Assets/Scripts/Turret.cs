@@ -5,9 +5,17 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     public Transform target;
-    public float range = 15f;
-    public Transform rotator;
 
+    [Header("Attributes")]
+    public float range = 15f;
+    public float fireRate = 1f;
+    public float fireCountdown = 0f;
+
+    public Transform rotator;
+    public float rotateSpeed = 10f;
+
+    public GameObject bulletPrefab;
+    public Transform firePoint;
     public string agentTag = "Agent";
 
     // Start is called before the first frame update
@@ -25,8 +33,27 @@ public class Turret : MonoBehaviour
 
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(rotator.rotation, lookRotation, Time.deltaTime).eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(rotator.rotation, lookRotation, Time.deltaTime * rotateSpeed).eulerAngles;
         rotator.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        if (fireCountdown <= 0f)
+        {
+            Shoot();
+            fireCountdown = 1f / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+    }
+
+    void Shoot()
+    {
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bulletScript = bulletGO.GetComponent<Bullet>();
+
+        if (bulletScript != null)
+        {
+            bulletScript.Seek(target);
+        }
     }
 
     void UpdateTarget()
