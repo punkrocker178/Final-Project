@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd903c8f096070146868256cd83eff23
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - machineGunTurretPrefab: {fileID: 58981091087685714, guid: 0072f459a060db94ca3fb2973f3b839c,
+      type: 3}
+  - rockerTurretPrefab: {fileID: 58981091087685714, guid: 0072f459a060db94ca3fb2973f3b839c,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
