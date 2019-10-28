@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6580836021314374633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6580836021314374634}
+  - component: {fileID: 6580836021314374635}
+  - component: {fileID: 6580836021314374632}
+  - component: {fileID: 6580836021314374637}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6580836021314374634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580836021314374633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.636005, y: 4.7837133, z: 8.12422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6580836021314374635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580836021314374633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6796067a531cdde4ea4f1f2de081f4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6580836021314374632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580836021314374633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53834a11a23c2242894249c8905db6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentsPrefab: {fileID: 1185552706448598427, guid: 2406db30ca82fec4d888c68c1a8c330d,
+    type: 3}
+  spawnPoint: {fileID: 3249987292991356177, guid: 39e0857c966d3a74384f698f764aba5f,
+    type: 3}
+  waveCountdownText: {fileID: 2833412608671240964, guid: d459fc5cdf6f5194ab2179614b3b3a46,
+    type: 3}
+  timeBetweenWaves: 5
+--- !u!114 &6580836021314374637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580836021314374633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd903c8f096070146868256cd83eff23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machineGunTurretPrefab: {fileID: 58981091087685714, guid: 0072f459a060db94ca3fb2973f3b839c,
+    type: 3}
+  rockerTurretPrefab: {fileID: 58981091087685714, guid: 0072f459a060db94ca3fb2973f3b839c,
+    type: 3}
