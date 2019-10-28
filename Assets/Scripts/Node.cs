@@ -6,7 +6,9 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
     private Renderer ren;
     private Color startColor;
-    private GameObject turret;
+
+    [Header("Optional")]
+    public GameObject turret;
 
     BuildController buildController;
 
@@ -24,12 +26,18 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (buildController.GetTurretBuild() == null)
+        if (!buildController.CanBuild())
         {
             return;
         }
         
-        ren.material.color = hoverColor;
+       if (!buildController.HasMoney())
+        {
+            ren.material.color = Color.red;
+        } else
+        {
+            ren.material.color = hoverColor;
+        }
     }
 
     void OnMouseExit()
@@ -44,7 +52,7 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (buildController.GetTurretBuild() == null)
+        if (!buildController.CanBuild())
         {
             return;
         }
@@ -54,8 +62,12 @@ public class Node : MonoBehaviour
             return;
         }
 
-        GameObject turretToBuild = buildController.GetTurretBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        buildController.BuildTurretOn(this);
+    }
+
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position;
     }
 
     // Update is called once per frame

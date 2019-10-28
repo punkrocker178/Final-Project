@@ -3,6 +3,8 @@
 public class Shop : MonoBehaviour
 {
     BuildController buildController;
+    public TurretBlueprint machineTurret;
+    public TurretBlueprint rocketTurret;
 
     void Start()
     {
@@ -12,12 +14,12 @@ public class Shop : MonoBehaviour
     public void BuyMachineGunTurret()
     {
         Debug.Log("Bought with gold");
-        buildController.SetTurretToBuild(buildController.machineGunTurretPrefab);
+        buildController.SelectTurret(machineTurret);
     }
 
     public void BuyRocketTurret()
     {
         Debug.Log("Bought with golden coin");
-        buildController.SetTurretToBuild(buildController.rockerTurretPrefab);
+        buildController.SelectTurret(rocketTurret);
     }
 }

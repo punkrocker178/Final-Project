@@ -285,11 +285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6440694397575398551}
     m_Modifications:
-    - target: {fileID: 714839236427550660, guid: bc1fb6d56b79a0943be5dfc7fa3c505f,
-        type: 3}
-      propertyPath: m_Name
-      value: FirePoint
-      objectReference: {fileID: 0}
     - target: {fileID: 420442774497201593, guid: bc1fb6d56b79a0943be5dfc7fa3c505f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -344,6 +339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 714839236427550660, guid: bc1fb6d56b79a0943be5dfc7fa3c505f,
+        type: 3}
+      propertyPath: m_Name
+      value: FirePoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1fb6d56b79a0943be5dfc7fa3c505f, type: 3}

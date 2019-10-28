@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BuildController : MonoBehaviour
 {
-    private GameObject turretToBuild;
-    public GameObject machineGunTurretPrefab;
-    public GameObject rockerTurretPrefab;
+    private TurretBlueprint turretToBuild;
 
     public static BuildController instance;
 
@@ -19,14 +17,34 @@ public class BuildController : MonoBehaviour
         instance = this;
     }
 
-    public void SetTurretToBuild(GameObject turret)
+    public void SelectTurret(TurretBlueprint blueprint)
     {
-        turretToBuild = turret;
+        turretToBuild = blueprint;
     }
 
-    public GameObject GetTurretBuild()
+    public bool CanBuild()
     {
-        return turretToBuild;
+        return turretToBuild != null;
+    }
+
+    public bool HasMoney()
+    {
+        return PlayerStats.Money >= turretToBuild.cost;
+    }
+
+    public void BuildTurretOn(Node node)
+    {
+        if (PlayerStats.Money < turretToBuild.cost)
+        {
+            Debug.Log("Not enough money");
+            return;
+        } else
+        {
+            PlayerStats.Money -= turretToBuild.cost;
+        }
+
+        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition() + node.positionOffset, Quaternion.identity);
+        node.turret = turret;
     }
 
     // Update is called once per frame
