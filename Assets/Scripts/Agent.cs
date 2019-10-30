@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
+    public int health = 100;
     public float speed = 150;
+    public int value = 50;
     private Transform target;
     private int wavepointIndex = 0;
-    
+        
     void Start()
     {
         target = Waypoints.points[0];
@@ -25,6 +27,23 @@ public class Agent : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        Debug.Log(damage + " " + health);
+        health -= damage;
+        
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        PlayerStats.Money += value;
+        Destroy(gameObject);
+    }
+
     void GetNextWaypoint()
     {
         if (wavepointIndex >= Waypoints.points.Length - 1)
@@ -33,9 +52,17 @@ public class Agent : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            EndPath();
             return;
         }
+
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
+    }
+
+    void EndPath()
+    {
+        Destroy(gameObject);
+        PlayerStats.Lives -= 1;
     }
 }

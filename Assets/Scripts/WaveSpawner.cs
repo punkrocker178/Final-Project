@@ -41,6 +41,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnAgent()
     {
-        Instantiate(agentsPrefab, spawnPoint.position, spawnPoint.rotation);
+        Transform agent = Instantiate(agentsPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }
