@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Agent : MonoBehaviour
 {
-    public int health = 100;
+    public float startHealth = 100;
     public float speed = 150;
     public int value = 50;
+    private float health;
     private Transform target;
     private int wavepointIndex = 0;
+
+    public Image healthBar;
         
     void Start()
     {
         target = Waypoints.points[0];
+        health = startHealth;
     }
 
     // Update is called once per frame
@@ -31,6 +36,7 @@ public class Agent : MonoBehaviour
     {
         Debug.Log(damage + " " + health);
         health -= damage;
+        healthBar.fillAmount = health / startHealth;
         
         if (health <= 0)
         {

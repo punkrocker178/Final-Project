@@ -18533,6 +18533,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6776600641063149300, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: m_Name
+      value: OverlayCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427594378826739069, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 772415717}
+    - target: {fileID: 437042387826464514, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7407814511067167089, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -18562,21 +18577,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6427594378826739069, guid: 6baffaad64c6dec41a2aa70a7322d61b,
-        type: 3}
-      propertyPath: ui
-      value: 
-      objectReference: {fileID: 772415717}
-    - target: {fileID: 6776600641063149300, guid: 6baffaad64c6dec41a2aa70a7322d61b,
-        type: 3}
-      propertyPath: m_Name
-      value: OverlayCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 437042387826464514, guid: 6baffaad64c6dec41a2aa70a7322d61b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6439542324583448859, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
@@ -18646,7 +18646,7 @@ PrefabInstance:
     - target: {fileID: 3500586770263077845, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30.5
+      value: -12.8
       objectReference: {fileID: 0}
     - target: {fileID: 3500586770263077845, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
@@ -18656,7 +18656,7 @@ PrefabInstance:
     - target: {fileID: 3500586770263077845, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 472.4
+      value: 507.9
       objectReference: {fileID: 0}
     - target: {fileID: 6776600641063149296, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
