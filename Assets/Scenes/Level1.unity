@@ -276,7 +276,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 43660676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1932220742}
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &43660676
@@ -16571,6 +16582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1596054951}
+  upgradeCost: {fileID: 1872908303}
+  upgradeButton: {fileID: 43660675}
 --- !u!1001 &1941755668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17327,7 +17340,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1972376134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1932220742}
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1972376134
@@ -19512,6 +19536,28 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 6776600642786375651, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: machineTurret.upgradeCost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6776600642786375651, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: rocketTurret.upgradeCost
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6776600642786375651, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: machineTurret.upgradedPrefab
+      value: 
+      objectReference: {fileID: 5217859153751502092, guid: e3cf964631fe48b40a2fd04d96b39c09,
+        type: 3}
+    - target: {fileID: 6776600642786375651, guid: 6baffaad64c6dec41a2aa70a7322d61b,
+        type: 3}
+      propertyPath: rocketTurret.upgradedPrefab
+      value: 
+      objectReference: {fileID: 6504740365359719082, guid: 240de93bc4c98904ea398fe06690cfea,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6baffaad64c6dec41a2aa70a7322d61b, type: 3}
 --- !u!1001 &8856403436906113712

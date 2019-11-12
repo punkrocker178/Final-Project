@@ -13,13 +13,13 @@ public class Shop : MonoBehaviour
 
     public void BuyMachineGunTurret()
     {
-        Debug.Log("Bought with gold");
+        Debug.Log("Select machine gun");
         buildController.SelectTurret(machineTurret);
     }
 
     public void BuyRocketTurret()
     {
-        Debug.Log("Bought with golden coin");
+        Debug.Log("Select rocket");
         buildController.SelectTurret(rocketTurret);
     }
 }

@@ -9,6 +9,8 @@ public class Node : MonoBehaviour
 
     [Header("Optional")]
     public GameObject turret;
+    public TurretBlueprint turretBlueprint;
+    public bool isUpgraded = false;
 
     BuildController buildController;
 
@@ -19,6 +21,7 @@ public class Node : MonoBehaviour
         startColor = ren.material.color;
         buildController = BuildController.instance;
     }
+
     void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -63,21 +66,39 @@ public class Node : MonoBehaviour
             return;
         }
 
-        BuildTurret(buildController.GetTurretToBuild ());
+        BuildTurret(buildController.GetTurretToBuild());
     }
 
-        void BuildTurret(TurretBlueprint blueprint) {
-        if (PlayerStats.Money < blueprint.cost)
+    public void BuildTurret(TurretBlueprint turretBlueprint) {
+        if (PlayerStats.Money < turretBlueprint.cost)
         {
             Debug.Log("Not enough money");
             return;
         } else
         {
-            PlayerStats.Money -= blueprint.cost;
+            PlayerStats.Money -= turretBlueprint.cost;
         }
 
-        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.prefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
+        this.turretBlueprint = turretBlueprint;
+    }
+
+    public void UpgradeTurret() {
+        if (PlayerStats.Money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Not enough money to upgrade");
+            return;
+        } else
+        {
+            PlayerStats.Money -= turretBlueprint.upgradeCost;
+        }
+
+        Destroy(turret);
+
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+        isUpgraded = true;
     }
 
     public Vector3 GetBuildPosition()
@@ -85,9 +106,4 @@ public class Node : MonoBehaviour
         return transform.position + positionOffset;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
