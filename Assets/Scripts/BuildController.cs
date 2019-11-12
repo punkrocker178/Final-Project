@@ -5,8 +5,10 @@ using UnityEngine;
 public class BuildController : MonoBehaviour
 {
     private TurretBlueprint turretToBuild;
+    private Node selectedNode;
 
     public static BuildController instance;
+    public NodeUI nodeUI;
 
     void Awake()
     {
@@ -20,6 +22,25 @@ public class BuildController : MonoBehaviour
     public void SelectTurret(TurretBlueprint blueprint)
     {
         turretToBuild = blueprint;
+        DeselectNode();
+    }
+
+    public void SelectNode (Node node) {
+
+        if (selectedNode == node) {
+            DeselectNode();
+            return;            
+        }
+
+        selectedNode = node;
+        turretToBuild = null;
+
+        nodeUI.SetTarget(node);
+    }
+
+    public void DeselectNode() {
+        selectedNode = null;
+        nodeUI.Hide();
     }
 
     public bool CanBuild()
@@ -32,24 +53,7 @@ public class BuildController : MonoBehaviour
         return PlayerStats.Money >= turretToBuild.cost;
     }
 
-    public void BuildTurretOn(Node node)
-    {
-        if (PlayerStats.Money < turretToBuild.cost)
-        {
-            Debug.Log("Not enough money");
-            return;
-        } else
-        {
-            PlayerStats.Money -= turretToBuild.cost;
-        }
-
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition() + node.positionOffset, Quaternion.identity);
-        node.turret = turret;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public TurretBlueprint GetTurretToBuild () {
+        return turretToBuild;
     }
 }

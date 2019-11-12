@@ -52,22 +52,37 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildController.CanBuild())
-        {
-            return;
-        }
-
         if (turret != null)
         {
+            buildController.SelectNode(this);
             return;
         }
 
-        buildController.BuildTurretOn(this);
+         if (!buildController.CanBuild())
+        {
+            return;
+        }
+
+        BuildTurret(buildController.GetTurretToBuild ());
+    }
+
+        void BuildTurret(TurretBlueprint blueprint) {
+        if (PlayerStats.Money < blueprint.cost)
+        {
+            Debug.Log("Not enough money");
+            return;
+        } else
+        {
+            PlayerStats.Money -= blueprint.cost;
+        }
+
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
     }
 
     public Vector3 GetBuildPosition()
     {
-        return transform.position;
+        return transform.position + positionOffset;
     }
 
     // Update is called once per frame
