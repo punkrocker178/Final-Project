@@ -391,5 +391,25 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7889735473128066509, guid: 7af04835d14baab40a3ad68bc7f39a17,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889735473128066509, guid: 7af04835d14baab40a3ad68bc7f39a17,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.30122128
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889735473128066509, guid: 7af04835d14baab40a3ad68bc7f39a17,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889735473128066509, guid: 7af04835d14baab40a3ad68bc7f39a17,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af04835d14baab40a3ad68bc7f39a17, type: 3}
