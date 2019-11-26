@@ -47,6 +47,7 @@ public class Agent : MonoBehaviour
     void Die()
     {
         PlayerStats.Money += value;
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
 
@@ -69,6 +70,7 @@ public class Agent : MonoBehaviour
     void EndPath()
     {
         Destroy(gameObject);
+        WaveSpawner.EnemiesAlive--;
         PlayerStats.Lives -= 1;
     }
 }

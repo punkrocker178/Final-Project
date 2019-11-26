@@ -101,6 +101,12 @@ public class Node : MonoBehaviour
         isUpgraded = true;
     }
 
+    public void SellTurret() {
+        PlayerStats.Money += (int) turretBlueprint.GetSellCost();
+        Destroy(turret);
+        turret = null;
+    }
+
     public Vector3 GetBuildPosition()
     {
         return transform.position + positionOffset;

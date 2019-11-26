@@ -16583,6 +16583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1596054951}
   upgradeCost: {fileID: 1872908303}
+  sellCost: {fileID: 1480242322}
   upgradeButton: {fileID: 43660675}
 --- !u!1001 &1941755668
 PrefabInstance:
@@ -19217,6 +19218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
         type: 3}
+      propertyPath: waves.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1669514959}
@@ -19231,6 +19237,54 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1185552706448598427, guid: 2406db30ca82fec4d888c68c1a8c330d,
         type: 3}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[0].agent
+      value: 
+      objectReference: {fileID: 1185552706448598431, guid: 2406db30ca82fec4d888c68c1a8c330d,
+        type: 3}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[0].count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[0].rate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[1].agent
+      value: 
+      objectReference: {fileID: 1185552706448598431, guid: 2406db30ca82fec4d888c68c1a8c330d,
+        type: 3}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[2].agent
+      value: 
+      objectReference: {fileID: 1185552706448598431, guid: 2406db30ca82fec4d888c68c1a8c330d,
+        type: 3}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[1].count
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[1].rate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[2].count
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580836021314374632, guid: ba176af1a446f5449a8fc5e506576085,
+        type: 3}
+      propertyPath: waves.Array.data[2].rate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6580836021314374637, guid: ba176af1a446f5449a8fc5e506576085,
         type: 3}
       propertyPath: rockerTurretPrefab
@@ -19544,7 +19598,7 @@ PrefabInstance:
     - target: {fileID: 6776600642786375651, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}
       propertyPath: rocketTurret.upgradeCost
-      value: 85
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6776600642786375651, guid: 6baffaad64c6dec41a2aa70a7322d61b,
         type: 3}

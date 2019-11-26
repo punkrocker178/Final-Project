@@ -301,7 +301,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 13510
+  m_LastSelectedObjectID: -3490
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -430,9 +430,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c6340000
-      m_LastClickedID: 13510
-      m_ExpandedIDs: 8639feffe85bfeff90f2ffff78fbffff40310000aa31000026340000c6340000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 90f2ffff78fbffffb431000030340000d0340000fa340000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -602,34 +602,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Turrets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Turrets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Program Files\Unity\Final\Final Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 782f0000
-    m_LastClickedID: 12152
-    m_ExpandedIDs: 00000000082d00003e2d0000bc2d0000202e0000402e00004430000052300000b0300000123900001439000000ca9a3b
+    scrollPos: {x: 0, y: 58}
+    m_SelectedIDs: 182e0000
+    m_LastClickedID: 11800
+    m_ExpandedIDs: 000000000a2d0000402d0000c02d0000242e0000442e00004e3000005c300000ba300000103900001239000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Turret
-      m_OriginalName: Turret
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15316
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -643,7 +643,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9af2ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000082d00003e2d0000bc2d0000202e0000443000001239000014390000
+    m_ExpandedIDs: 000000000a2d0000402d0000c02d0000242e0000442e00004e3000005c300000ba3000001039000012390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,8 +668,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 6e310000
-    m_LastClickedInstanceID: 12654
+    m_SelectedInstanceIDs: 5ef2ffff
+    m_LastClickedInstanceID: -3490
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004a4900003a380000d033000070380000724a0000f82d0000442d0000de2e00005e2d0000542d000000000000262e0000
     m_RenameOverlay:
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Debug
+    m_Text: Inspector
     m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
