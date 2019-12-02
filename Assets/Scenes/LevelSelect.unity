@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 10492092}
   m_Layer: 5
   m_Name: LevelButton (10)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 306156073}
   m_Layer: 5
   m_Name: LevelButton (2)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 979776061}
   m_Layer: 5
   m_Name: LevelButton (9)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 1114387916}
   m_Layer: 5
   m_Name: LevelButton (4)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1732,7 +1732,7 @@ GameObject:
   - component: {fileID: 1293821178}
   m_Layer: 5
   m_Name: LevelButton (11)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 1407578734}
   m_Layer: 5
   m_Name: LevelButton (1)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2107,7 +2107,7 @@ GameObject:
   - component: {fileID: 1420208599}
   m_Layer: 5
   m_Name: LevelButton
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2339,7 +2339,7 @@ GameObject:
   - component: {fileID: 1570622688}
   m_Layer: 5
   m_Name: LevelButton (6)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2630,7 +2630,7 @@ GameObject:
   - component: {fileID: 1664428500}
   m_Layer: 5
   m_Name: LevelButton (3)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: 1753373628}
   m_Layer: 5
   m_Name: LevelButton (8)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2975,7 +2975,7 @@ GameObject:
   - component: {fileID: 1872819957}
   m_Layer: 5
   m_Name: LevelButton (7)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3108,7 +3108,7 @@ GameObject:
   - component: {fileID: 1890627592}
   m_Layer: 5
   m_Name: LevelButton (5)
-  m_TagString: Untagged
+  m_TagString: LevelButtons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
