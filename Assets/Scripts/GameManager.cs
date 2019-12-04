@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool GameIsOver;
+    public static bool LevelIsWon;
     public GameObject gameOverUI;
+    public GameObject levelWonUI;
 
     void Start()
     {
@@ -20,6 +22,10 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        if (WaveSpawner.IsStopped) {
+            WinGame();
+        }
+
         if (PlayerStats.Lives <= 0)
         {
             EndGame();
@@ -31,5 +37,11 @@ public class GameManager : MonoBehaviour
     {
         GameIsOver = true;
         gameOverUI.SetActive(true);
+    }
+
+    void WinGame() {
+        PlayerStats.UpdateLevel(PlayerStats.GetCurrentLevel());
+        levelWonUI.SetActive(true);
+        LevelIsWon = true;
     }
 }

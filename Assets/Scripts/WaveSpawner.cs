@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
+    public static bool IsStopped = false;
     public Wave[] waves;
     public Transform spawnPoint;
     public Text waveCountdownText;
@@ -46,8 +47,10 @@ public class WaveSpawner : MonoBehaviour
         }
         waveIndex++;
 
+        // Stop spawning
         if (waveIndex == waves.Length) {
             this.enabled = false;
+            IsStopped = true;
         }
     }
 

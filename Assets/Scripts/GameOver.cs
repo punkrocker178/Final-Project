@@ -22,4 +22,10 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void NextLevel() {
+        if (PlayerStats.GetNextLevel() != null) {
+            SceneManager.LoadScene(PlayerStats.GetNextLevel().levelName);
+        }
+    }
 }
