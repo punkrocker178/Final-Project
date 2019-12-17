@@ -12,6 +12,8 @@ public class Agent : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 0;
 
+    private bool isDead = false;
+
     public Image healthBar;
         
     void Start()
@@ -38,7 +40,7 @@ public class Agent : MonoBehaviour
         health -= damage;
         healthBar.fillAmount = health / startHealth;
         
-        if (health <= 0)
+        if (health <= 0  && !isDead)
         {
             Die();
         }
@@ -46,6 +48,7 @@ public class Agent : MonoBehaviour
 
     void Die()
     {
+        isDead = true;
         PlayerStats.Money += value;
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);

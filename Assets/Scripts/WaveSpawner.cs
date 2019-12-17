@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
-    public static bool IsStopped = false;
     public Wave[] waves;
     public Transform spawnPoint;
     public Text waveCountdownText;
@@ -16,11 +15,19 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    public GameManager gameManager;
+
     // Update is called once per frame
     void Update()
     {
         if (EnemiesAlive > 0) {
             return;
+        }
+
+        // Stop spawning
+        if (waveIndex == waves.Length) {
+            gameManager.WinGame();
+            this.enabled = false;
         }
 
         if (countdown <= 0f)
@@ -47,11 +54,7 @@ public class WaveSpawner : MonoBehaviour
         }
         waveIndex++;
 
-        // Stop spawning
-        if (waveIndex == waves.Length) {
-            this.enabled = false;
-            IsStopped = true;
-        }
+
     }
 
     void SpawnAgent(GameObject enemy)
